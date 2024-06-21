@@ -11,5 +11,7 @@
             "email": "rhuanksantos2@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "mpdf/mpdf": "^8.2"
+    }
 }
