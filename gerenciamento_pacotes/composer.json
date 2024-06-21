@@ -1,0 +1,15 @@
+{
+    "name": "rhuan/gerenciamento_pacotes",
+    "autoload": {
+        "psr-4": {
+            "Rhuan\\GerenciamentoPacotes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rhuan Kowic Santos",
+            "email": "rhuanksantos2@gmail.com"
+        }
+    ],
+    "require": {}
+}
