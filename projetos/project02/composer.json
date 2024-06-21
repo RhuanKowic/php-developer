@@ -1,0 +1,17 @@
+{
+    "name": "rhuan/project02",
+    "autoload": {
+        "psr-4": {
+            "Rhuan\\Project02\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rhuan Kowic Santos",
+            "email": "rhuanksantos2@gmail.com"
+        }
+    ],
+    "require": {
+        "mpdf/mpdf": "^8.2"
+    }
+}
