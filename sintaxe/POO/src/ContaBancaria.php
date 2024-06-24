@@ -3,11 +3,20 @@
 namespace App;
 
 class ContaBancaria{
-    public string $banco = "NuBank";
-    public string $nomeTitular = "Joao";
-    public int $numeroAgencia = 8244;
-    public string $numeroConta = "1234-56";
-    public float $saldo = 0;
+    private string $banco;
+    private string $nomeTitular;
+    private int $numeroAgencia;
+    private string $numeroConta;
+    private float $saldo;
+
+    public function __construct(string $banco, string $nomeTitular, string $numeroAgencia, string $numeroConta, float $saldo)
+    {
+        $this->banco = $banco;
+        $this->nomeTitular = $nomeTitular;
+        $this->numeroAgencia = $numeroAgencia;
+        $this->numeroConta = $numeroConta;
+        $this->saldo = $saldo;
+    }
 
     public function exibirDados() : array{
         return[
@@ -17,5 +26,28 @@ class ContaBancaria{
             'numeroConta' => $this->numeroConta,
             'saldo' => $this->saldo,
         ];
+    }
+
+    public function setBanco(string $banco): void{
+        $this->banco = $banco;
+    }
+
+    public function getBanco(): string{
+        return $this->banco;
+    }
+    
+
+    public function depositar(float $valor): string{
+        $this->saldo += $valor;
+        return 'Deposito de R$' . number_format($valor, 2, ',', '') . ' realizando';
+    }
+
+    public function sacar(float $valor): string{
+        $this->saldo -= $valor;
+        return 'Saque de R$' . number_format($valor, 2, ',', '') . ' realizando';
+    }
+
+    public function obterSaldo(): string{
+        return 'Seu saldo atual é: R$ ' . number_format($this->saldo, 2, ',', '');
     }
 }
